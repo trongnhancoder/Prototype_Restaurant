@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đánh giá - HaDiDi Restaurant</title>
+  <link rel="stylesheet" href="review.css">
+  <link rel="stylesheet" href="../layout/header.css">
+  <link rel="stylesheet" href="../layout/footer.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="../home/home.html">
+          <img src="../assets/logo.png" alt="HaDiDi Restaurant">
+        </a>
+      </div>
+      
+      <nav class="nav-desktop">
+        <ul class="nav-links">
+          <li><a href="../home/home.html" class="nav-link">Trang chủ</a></li>
+          <li><a href="../about/about.html" class="nav-link">Giới thiệu</a></li>
+          <li><a href="../menu/menu.html" class="nav-link">Thực đơn</a></li>
+          <li><a href="../reservation/reservation.html" class="nav-link">Đặt bàn</a></li>
+          <li><a href="../contact/contact.html" class="nav-link">Liên hệ</a></li>
+        </ul>
+      </nav>
+      
+      <div class="user-actions">
+        <div class="user-menu">
+          <button class="user-btn">
+            <span class="user-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </span>
+            <span class="username">Người dùng</span>
+          </button>
+          
+          <div class="dropdown-menu">
+            <a href="../booking-history/booking-history.html" class="dropdown-item">Lịch sử đặt bàn</a>
+            <a href="../review/review.html" class="dropdown-item active">Đánh giá</a>
+            <a href="../auth/auth.html" class="dropdown-item logout">Đăng xuất</a>
+          </div>
+        </div>
+        
+        <a href="../auth/auth.html" class="auth-btn">Đăng nhập</a>
+      </div>
+      
+      <button class="mobile-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+    
+    <nav class="nav-mobile">
+      <ul class="mobile-links">
+        <li><a href="../home/home.html" class="mobile-link">Trang chủ</a></li>
+        <li><a href="../about/about.html" class="mobile-link">Giới thiệu</a></li>
+        <li><a href="../menu/menu.html" class="mobile-link">Thực đơn</a></li>
+        <li><a href="../reservation/reservation.html" class="mobile-link">Đặt bàn</a></li>
+        <li><a href="../contact/contact.html" class="mobile-link">Liên hệ</a></li>
+        <li><a href="../booking-history/booking-history.html" class="mobile-link">Lịch sử đặt bàn</a></li>
+        <li><a href="../auth/auth.html" class="mobile-link">Đăng nhập / Đăng ký</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="review-container">
+    <div class="review-header">
+      <h1 class="review-title">Đánh giá từ khách hàng</h1>
+      <p class="review-subtitle">Chia sẻ trải nghiệm của bạn về HaDiDi Restaurant</p>
+    </div>
+
+    <div class="review-content">
+      <div class="review-summary">
+        <div class="rating-overview">
+          <div class="rating-score">
+            <div class="average-rating">4.8</div>
+            <div class="rating-stars">
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star half-filled">★</span>
+            </div>
+            <div class="rating-count">Dựa trên 124 đánh giá</div>
+          </div>
+          <div class="rating-bars">
+            <div class="rating-bar-row">
+              <div class="star-label">5 sao</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 85%;"></div>
+              </div>
+              <div class="percent">85%</div>
+            </div>
+            <div class="rating-bar-row">
+              <div class="star-label">4 sao</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 10%;"></div>
+              </div>
+              <div class="percent">10%</div>
+            </div>
+            <div class="rating-bar-row">
+              <div class="star-label">3 sao</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 5%;"></div>
+              </div>
+              <div class="percent">5%</div>
+            </div>
+            <div class="rating-bar-row">
+              <div class="star-label">2 sao</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 0%;"></div>
+              </div>
+              <div class="percent">0%</div>
+            </div>
+            <div class="rating-bar-row">
+              <div class="star-label">1 sao</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 0%;"></div>
+              </div>
+              <div class="percent">0%</div>
+            </div>
+          </div>
+        </div>
+        <div class="add-review">
+          <button id="writeReviewBtn" class="btn-write-review">Viết đánh giá</button>
+        </div>
+      </div>
+
+      <div class="review-filters">
+        <div class="filter-row">
+          <div class="filter-label">Lọc đánh giá:</div>
+          <div class="filter-options">
+            <button class="filter-btn active">Tất cả</button>
+            <button class="filter-btn">5 Sao</button>
+            <button class="filter-btn">4 Sao</button>
+            <button class="filter-btn">3 Sao</button>
+            <button class="filter-btn">2 Sao</button>
+            <button class="filter-btn">1 Sao</button>
+          </div>
+          <div class="sort-options">
+            <label for="sort">Sắp xếp:</label>
+            <select id="sort" class="sort-select">
+              <option value="newest">Mới nhất</option>
+              <option value="oldest">Cũ nhất</option>
+              <option value="highest">Điểm cao nhất</option>
+              <option value="lowest">Điểm thấp nhất</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-list">
+        <!-- Review 1 -->
+        <div class="review-item">
+          <div class="review-avatar">
+            <img src="../assets/avatar-1.jpg" alt="Nguyễn Thị B">
+          </div>
+          <div class="review-body">
+            <div class="review-header">
+              <div class="review-author">Nguyễn Thị B</div>
+              <div class="review-date">20/05/2024</div>
+            </div>
+            <div class="review-rating">
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+            </div>
+            <div class="review-text">
+              <p>Món ăn ngon, phục vụ chu đáo, không gian thoáng mát và sang trọng. Tôi sẽ quay lại vào dịp đặc biệt tiếp theo!</p>
+            </div>
+            <div class="review-actions">
+              <button class="btn-like">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+                </svg>
+                <span>12</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-item">
+          <div class="review-avatar">
+            <img src="../assets/avatar-2.jpg" alt="Trần Văn C">
+          </div>
+          <div class="review-body">
+            <div class="review-header">
+              <div class="review-author">Trần Văn C</div>
+              <div class="review-date">15/05/2024</div>
+            </div>
+            <div class="review-rating">
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star">★</span>
+            </div>
+            <div class="review-text">
+              <p>Nhà hàng rất đẹp, đồ ăn chất lượng. Tuy nhiên, thời gian chờ món hơi lâu. Hy vọng sẽ cải thiện hơn trong lần tới.</p>
+            </div>
+            <div class="review-actions">
+              <button class="btn-like">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+                </svg>
+                <span>8</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-item">
+          <div class="review-avatar">
+            <img src="../assets/avatar-3.jpg" alt="Lê Thị D">
+          </div>
+          <div class="review-body">
+            <div class="review-header">
+              <div class="review-author">Lê Thị D</div>
+              <div class="review-date">10/05/2024</div>
+            </div>
+            <div class="review-rating">
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+            </div>
+            <div class="review-text">
+              <p>Tổ chức sinh nhật cho con gái tại đây, nhân viên rất nhiệt tình và chu đáo. Bé rất thích không gian và món ăn ở đây. Cảm ơn nhà hàng!</p>
+            </div>
+            <div class="review-actions">
+              <button class="btn-like">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+                </svg>
+                <span>15</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-pagination">
+        <button class="pagination-btn" disabled>&lt;</button>
+        <button class="pagination-btn active">1</button>
+        <button class="pagination-btn">2</button>
+        <button class="pagination-btn">3</button>
+        <button class="pagination-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div id="reviewModal" class="review-modal" style="display: none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Viết đánh giá</h2>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form id="reviewForm">
+            <div class="form-group">
+              <label>Đánh giá của bạn:</label>
+              <div class="star-rating">
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5">★</label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4">★</label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3">★</label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2">★</label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1">★</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="reviewTitle">Tiêu đề:</label>
+              <input type="text" id="reviewTitle" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="reviewContent">Nội dung đánh giá:</label>
+              <textarea id="reviewContent" class="form-control" rows="5" placeholder="Chia sẻ trải nghiệm của bạn..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="visitDate">Ngày ghé thăm:</label>
+              <input type="date" id="visitDate" class="form-control">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-submit">Gửi đánh giá</button>
+          <button type="button" class="btn-cancel">Hủy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="../assets/logo.png" alt="HaDiDi Restaurant">
+        <p class="logo-text">Nơi hương vị truyền thống kết hợp với không gian sang trọng</p>
+      </div>
+      
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="section-title">Liên hệ</h3>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <span class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </span>
+              <span>(028) 3456 7890</span>
+            </li>
+            <li class="contact-item">
+              <span class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </span>
+              <span>info@hadidirestaurant.com</span>
+            </li>
+            <li class="contact-item">
+              <span class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span>123 Lê Lợi, Quận 1, TP. Hồ Chí Minh</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3 class="section-title">Giờ mở cửa</h3>
+          <ul class="hours-list">
+            <li><span>Thứ 2 - Thứ 6:</span> <span>7:00 - 22:00</span></li>
+            <li><span>Thứ 7 - Chủ nhật:</span> <span>7:00 - 23:00</span></li>
+            <li><span>Ngày lễ:</span> <span>8:00 - 22:00</span></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3 class="section-title">Điều hướng</h3>
+          <ul class="nav-list">
+            <li><a href="../home/home.html">Trang chủ</a></li>
+            <li><a href="../about/about.html">Giới thiệu</a></li>
+            <li><a href="../menu/menu.html">Thực đơn</a></li>
+            <li><a href="../reservation/reservation.html">Đặt bàn</a></li>
+            <li><a href="../contact/contact.html">Liên hệ</a></li>
+            <li><a href="../review/review.html">Đánh giá</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="social-icons">
+        <a href="#" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+          </svg>
+        </a>
+        <a href="#" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+        <a href="#" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="copyright">
+        © 2024 HaDiDi Restaurant. Tất cả quyền được bảo lưu.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const mobileToggle = document.querySelector('.mobile-toggle');
+      const header = document.querySelector('.header');
+      
+      mobileToggle.addEventListener('click', function() {
+        header.classList.toggle('mobile-open');
+      });
+
+      // Modal functions
+      const writeReviewBtn = document.getElementById('writeReviewBtn');
+      const reviewModal = document.getElementById('reviewModal');
+      const modalClose = document.querySelector('.modal-close');
+      const btnCancel = document.querySelector('.btn-cancel');
+      
+      writeReviewBtn.addEventListener('click', function() {
+        reviewModal.style.display = 'flex';
+      });
+      
+      function closeModal() {
+        reviewModal.style.display = 'none';
+      }
+      
+      modalClose.addEventListener('click', closeModal);
+      btnCancel.addEventListener('click', closeModal);
+      
+      window.addEventListener('click', function(event) {
+        if (event.target === reviewModal) {
+          closeModal();
+        }
+      });
+
+      // Filter buttons
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      
+      filterBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          filterBtns.forEach(function(btn) {
+            btn.classList.remove('active');
+          });
+          this.classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html> 

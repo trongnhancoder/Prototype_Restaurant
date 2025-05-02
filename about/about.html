@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giới thiệu - HaDiDi Restaurant</title>
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header và Navigation -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="../home/home.html">
+          <img src="../assets/logo.png" alt="HaDiDi Restaurant">
+          <span>HaDiDi Restaurant</span>
+        </a>
+      </div>
+      
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../home/home.html">Trang chủ</a></li>
+          <li class="nav-item"><a href="../menu/menu.html">Thực đơn</a></li>
+          <li class="nav-item"><a href="../reservation/reservation.html">Đặt bàn</a></li>
+          <li class="nav-item active"><a href="../about/about.html">Giới thiệu</a></li>
+          <li class="nav-item"><a href="../review/review.html">Đánh giá</a></li>
+          <li class="nav-item"><a href="../contact/contact.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header-actions">
+        <a href="../auth/auth.html" class="btn-login">
+          <i class="fas fa-user"></i>
+          <span>Đăng nhập</span>
+        </a>
+        <button class="mobile-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="about-container">
+    <div class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">Giới thiệu HaDiDi Restaurant</h1>
+        <p class="hero-subtitle">Không gian sang trọng và ẩm thực tinh tế</p>
+      </div>
+    </div>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+      <div class="section-container">
+        <ul class="breadcrumb">
+          <li><a href="../home/home.html">Trang chủ</a></li>
+          <li><i class="fas fa-angle-right"></i></li>
+          <li class="active">Giới thiệu</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="features-section">
+      <div class="section-container">
+        <h2 class="section-title">Tại sao chọn chúng tôi?</h2>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-concierge-bell fa-2x"></i>
+            </div>
+            <h3 class="feature-title">Dịch vụ tận tâm</h3>
+            <p class="feature-desc">Đội ngũ nhân viên chuyên nghiệp, luôn sẵn sàng phục vụ mọi nhu cầu của quý khách.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-glass-cheers fa-2x"></i>
+            </div>
+            <h3 class="feature-title">Trải nghiệm đỉnh cao</h3>
+            <p class="feature-desc">Không gian sang trọng, âm nhạc du dương, mọi giác quan đều được thỏa mãn.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-utensils fa-2x"></i>
+            </div>
+            <h3 class="feature-title">Thực đơn đa dạng</h3>
+            <p class="feature-desc">Thực đơn phong phú với nhiều món ăn đặc sắc, phù hợp với mọi khẩu vị.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="far fa-calendar-alt fa-2x"></i>
+            </div>
+            <h3 class="feature-title">Đặt bàn dễ dàng</h3>
+            <p class="feature-desc">Đặt bàn trực tuyến nhanh chóng, dễ dàng và được xác nhận ngay lập tức.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Navigation -->
+    <div class="page-navigation">
+      <div class="section-container">
+        <ul class="nav-dots">
+          <li><a href="#features" class="active" data-section="features">Tính năng</a></li>
+          <li><a href="#about" data-section="about">Về chúng tôi</a></li>
+          <li><a href="#gallery" data-section="gallery">Không gian</a></li>
+          <li><a href="#faq" data-section="faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="about" class="about-section">
+      <div class="section-container">
+        <div class="about-content">
+          <div class="about-image">
+            <img src="../assets/about-restaurant.jpg" alt="HaDiDi Restaurant">
+          </div>
+          <div class="about-text">
+            <h2 class="section-title">Về chúng tôi</h2>
+            <p>
+              HaDiDi Restaurant được thành lập vào năm 2010, là điểm đến lý tưởng cho những ai yêu thích ẩm thực tinh tế và không gian sang trọng.
+            </p>
+            <p>
+              Với đội ngũ đầu bếp giàu kinh nghiệm, chúng tôi tự hào mang đến những trải nghiệm ẩm thực độc đáo, kết hợp giữa hương vị truyền thống và sáng tạo hiện đại.
+            </p>
+            <p>
+              Không gian nhà hàng được thiết kế tinh tế, sang trọng với tông màu ấm áp, tạo cảm giác thân thiện và gần gũi cho thực khách.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="gallery" class="gallery-section">
+      <div class="section-container">
+        <h2 class="section-title">Không gian nhà hàng</h2>
+        
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="../assets/gallery-1.jpg" alt="Không gian sang trọng">
+            <div class="gallery-caption">Không gian sang trọng</div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/gallery-2.jpg" alt="Phòng VIP">
+            <div class="gallery-caption">Phòng VIP</div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/gallery-3.jpg" alt="Khu vực bar">
+            <div class="gallery-caption">Khu vực bar</div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/gallery-4.jpg" alt="Sân vườn">
+            <div class="gallery-caption">Sân vườn</div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/gallery-5.jpg" alt="Nhà bếp">
+            <div class="gallery-caption">Nhà bếp</div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/gallery-6.jpg" alt="Khu vực tiệc cưới">
+            <div class="gallery-caption">Khu vực tiệc cưới</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="faq" class="faq-section">
+      <div class="section-container">
+        <h2 class="section-title">Câu hỏi thường gặp</h2>
+        
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Nhà hàng có nhận đặt tiệc không?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Có, HaDiDi Restaurant nhận đặt tiệc cho mọi dịp: sinh nhật, kỷ niệm, họp mặt công ty, tiệc cưới... Vui lòng liên hệ trước ít nhất 3 ngày để chúng tôi chuẩn bị chu đáo.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Tôi có thể đặt bàn qua điện thoại không?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Có, quý khách có thể đặt bàn qua điện thoại số (028) 3456 7890 hoặc đặt trực tuyến trên website của chúng tôi.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Nhà hàng có phục vụ đồ chay không?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Có, chúng tôi có thực đơn chay phong phú để phục vụ nhu cầu của khách hàng.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Có chỗ đậu xe ở nhà hàng không?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Có, nhà hàng có bãi đậu xe rộng rãi, miễn phí cho khách hàng.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <div class="section-container">
+        <div class="cta-content">
+          <h2 class="cta-title">Đặt bàn ngay hôm nay</h2>
+          <p class="cta-desc">Hãy trải nghiệm không gian ẩm thực độc đáo tại HaDiDi Restaurant</p>
+          <a href="../reservation/reservation.html" class="cta-btn">Đặt bàn ngay</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <div class="footer-logo">
+            <img src="../assets/logo.png" alt="HaDiDi Restaurant">
+            <h3>HaDiDi Restaurant</h3>
+          </div>
+          <p>Nơi hội tụ tinh hoa ẩm thực Việt Nam và quốc tế.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Liên kết nhanh</h4>
+          <ul>
+            <li><a href="../home/home.html">Trang chủ</a></li>
+            <li><a href="../menu/menu.html">Thực đơn</a></li>
+            <li><a href="../reservation/reservation.html">Đặt bàn</a></li>
+            <li><a href="../about/about.html">Giới thiệu</a></li>
+            <li><a href="../contact/contact.html">Liên hệ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Thông tin liên hệ</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Đường Nguyễn Huệ, Quận 1, TP.HCM</li>
+            <li><i class="fas fa-phone"></i> (028) 3456 7890</li>
+            <li><i class="fas fa-envelope"></i> info@hadidi.com</li>
+          </ul>
+        </div>
+        
+        <div class="footer-social">
+          <h4>Kết nối với chúng tôi</h4>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2023 HaDiDi Restaurant. Tất cả quyền được bảo lưu.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // FAQ Accordion
+      const faqItems = document.querySelectorAll('.faq-item');
+      
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+          // Đóng tất cả các items khác
+          faqItems.forEach(otherItem => {
+            if (otherItem !== item && otherItem.classList.contains('active')) {
+              otherItem.classList.remove('active');
+            }
+          });
+          
+          // Toggle active class
+          item.classList.toggle('active');
+        });
+      });
+      
+      // Gallery image animation on scroll
+      const galleryItems = document.querySelectorAll('.gallery-item');
+      
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.bottom >= 0
+        );
+      }
+      
+      function animateOnScroll() {
+        galleryItems.forEach((item, index) => {
+          if (isInViewport(item)) {
+            setTimeout(() => {
+              item.style.opacity = "1";
+              item.style.transform = "translateY(0)";
+            }, index * 100);
+          }
+        });
+      }
+      
+      // Set initial styles
+      galleryItems.forEach(item => {
+        item.style.opacity = "0";
+        item.style.transform = "translateY(20px)";
+        item.style.transition = "all 0.5s ease";
+      });
+      
+      // Run on load
+      animateOnScroll();
+      
+      // Run on scroll
+      window.addEventListener('scroll', animateOnScroll);
+      
+      // Mobile Toggle
+      const mobileToggle = document.querySelector('.mobile-toggle');
+      const navList = document.querySelector('.nav-list');
+      
+      mobileToggle.addEventListener('click', () => {
+        mobileToggle.classList.toggle('active');
+        navList.classList.toggle('active');
+      });
+      
+      // Page Navigation
+      const navDots = document.querySelectorAll('.nav-dots a');
+      const sections = document.querySelectorAll('#features, #about, #gallery, #faq');
+      
+      function activateNavDot() {
+        const scrollPosition = window.scrollY;
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 100;
+          const sectionBottom = sectionTop + section.offsetHeight;
+          
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            const targetDot = document.querySelector(`.nav-dots a[data-section="${section.id}"]`);
+            
+            navDots.forEach(dot => {
+              dot.classList.remove('active');
+            });
+            
+            if (targetDot) {
+              targetDot.classList.add('active');
+            }
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', activateNavDot);
+      
+      navDots.forEach(dot => {
+        dot.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetSection = document.getElementById(dot.getAttribute('data-section'));
+          
+          if (targetSection) {
+            window.scrollTo({
+              top: targetSection.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Back to top
+      const backToTop = document.querySelector('.back-to-top');
+      
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTop.classList.add('show');
+        } else {
+          backToTop.classList.remove('show');
+        }
+      });
+      
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html> 

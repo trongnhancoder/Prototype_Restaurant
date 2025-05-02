@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Lịch sử đặt bàn - HaDiDi Restaurant</title>
+  <link rel="stylesheet" href="booking-history.css">
+</head>
+<body>
+  <div class="history-container">
+    <div class="history-header">
+      <h1 class="history-title">Lịch sử đặt bàn</h1>
+      <p class="history-subtitle">Xem lại thông tin đặt bàn của bạn</p>
+    </div>
+
+    <div class="history-content">
+      <div class="history-filters">
+        <div class="filter-row">
+          <div class="filter-group">
+            <label for="status">Trạng thái</label>
+            <select id="status" class="filter-control">
+              <option value="all">Tất cả</option>
+              <option value="confirmed">Đã xác nhận</option>
+              <option value="pending">Đang chờ</option>
+              <option value="completed">Đã hoàn thành</option>
+              <option value="cancelled">Đã hủy</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <label for="date">Thời gian</label>
+            <select id="date" class="filter-control">
+              <option value="all">Tất cả</option>
+              <option value="today">Hôm nay</option>
+              <option value="week">Tuần này</option>
+              <option value="month">Tháng này</option>
+              <option value="year">Năm nay</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <label for="search">Tìm kiếm</label>
+            <input type="text" id="search" class="filter-control" placeholder="Mã đặt bàn, tên...">
+          </div>
+          
+          <div class="filter-actions">
+            <button type="button" class="btn-filter">Lọc</button>
+            <button type="button" class="btn-reset">Đặt lại</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="history-table-container">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Mã đặt bàn</th>
+              <th>Ngày đặt</th>
+              <th>Giờ</th>
+              <th>Số người</th>
+              <th>Trạng thái</th>
+              <th>Thao tác</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#RES123456</td>
+              <td>20/05/2024</td>
+              <td>18:30</td>
+              <td>4</td>
+              <td><span class="status-confirmed">Đã xác nhận</span></td>
+              <td>
+                <button class="btn-view">Xem</button>
+                <button class="btn-cancel">Hủy</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#RES123457</td>
+              <td>15/05/2024</td>
+              <td>19:00</td>
+              <td>2</td>
+              <td><span class="status-completed">Đã hoàn thành</span></td>
+              <td>
+                <button class="btn-view">Xem</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#RES123458</td>
+              <td>10/05/2024</td>
+              <td>20:30</td>
+              <td>6</td>
+              <td><span class="status-cancelled">Đã hủy</span></td>
+              <td>
+                <button class="btn-view">Xem</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#RES123459</td>
+              <td>25/05/2024</td>
+              <td>12:00</td>
+              <td>3</td>
+              <td><span class="status-pending">Đang chờ</span></td>
+              <td>
+                <button class="btn-view">Xem</button>
+                <button class="btn-cancel">Hủy</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="history-pagination">
+        <div class="pagination-info">Hiển thị 1-4 của 4 kết quả</div>
+        <div class="pagination-controls">
+          <button class="pagination-btn btn-prev" disabled>&lt;</button>
+          <button class="pagination-btn active">1</button>
+          <button class="pagination-btn btn-next" disabled>&gt;</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="booking-detail-modal" id="bookingDetailModal" style="display: none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Chi tiết đặt bàn</h2>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="detail-row">
+            <div class="detail-label">Mã đặt bàn:</div>
+            <div class="detail-value">#RES123456</div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-label">Tên khách hàng:</div>
+            <div class="detail-value">Nguyễn Văn A</div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-label">Số điện thoại:</div>
+            <div class="detail-value">0912345678</div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-label">Email:</div>
+            <div class="detail-value">nguyenvana@example.com</div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-label">Ngày đặt:</div>
+            <div class="detail-value">20/05/2024</div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-label">Giờ đặt:</div>
+            <div class="detail-value">18:30</div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-label">Số người:</div>
+            <div class="detail-value">4</div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-label">Trạng thái:</div>
+            <div class="detail-value"><span class="status-confirmed">Đã xác nhận</span></div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-label">Ghi chú:</div>
+            <div class="detail-value">Mong muốn bàn gần cửa sổ, có trẻ em đi cùng.</div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-cancel-booking">Hủy đặt bàn</button>
+          <button class="btn-close-modal">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 

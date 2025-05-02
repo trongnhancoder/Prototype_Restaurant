@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thực đơn - HaDiDi Restaurant</title>
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="../layout/header.css">
+  <link rel="stylesheet" href="../layout/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="../home/home.html">
+          <img src="../assets/logo.png" alt="HaDiDi Restaurant">
+        </a>
+      </div>
+      
+      <nav class="nav-desktop">
+        <ul class="nav-links">
+          <li><a href="../home/home.html" class="nav-link">Trang chủ</a></li>
+          <li><a href="../about/about.html" class="nav-link">Giới thiệu</a></li>
+          <li><a href="../menu/menu.html" class="nav-link active">Thực đơn</a></li>
+          <li><a href="../reservation/reservation.html" class="nav-link">Đặt bàn</a></li>
+          <li><a href="../contact/contact.html" class="nav-link">Liên hệ</a></li>
+          <li><a href="../review/review.html" class="nav-link">Đánh giá</a></li>
+        </ul>
+      </nav>
+      
+      <div class="user-actions">
+        <div class="user-menu">
+          <button class="user-btn">
+            <span class="user-icon">
+              <i class="fas fa-user-circle"></i>
+            </span>
+            <span class="username">Người dùng</span>
+          </button>
+          
+          <div class="dropdown-menu">
+            <a href="../booking-history/booking-history.html" class="dropdown-item">
+              <i class="fas fa-history"></i> Lịch sử đặt bàn
+            </a>
+            <a href="../review/review.html" class="dropdown-item">
+              <i class="fas fa-star"></i> Đánh giá
+            </a>
+            <a href="../auth/auth.html" class="dropdown-item logout">
+              <i class="fas fa-sign-out-alt"></i> Đăng xuất
+            </a>
+          </div>
+        </div>
+        
+        <a href="../auth/auth.html" class="auth-btn">
+          <i class="fas fa-sign-in-alt"></i> Đăng nhập
+        </a>
+      </div>
+      
+      <button class="mobile-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+    
+    <nav class="nav-mobile">
+      <ul class="mobile-links">
+        <li><a href="../home/home.html" class="mobile-link">Trang chủ</a></li>
+        <li><a href="../about/about.html" class="mobile-link">Giới thiệu</a></li>
+        <li><a href="../menu/menu.html" class="mobile-link active">Thực đơn</a></li>
+        <li><a href="../reservation/reservation.html" class="mobile-link">Đặt bàn</a></li>
+        <li><a href="../contact/contact.html" class="mobile-link">Liên hệ</a></li>
+        <li><a href="../review/review.html" class="mobile-link">Đánh giá</a></li>
+        <li><a href="../booking-history/booking-history.html" class="mobile-link">Lịch sử đặt bàn</a></li>
+        <li><a href="../auth/auth.html" class="mobile-link">Đăng nhập / Đăng ký</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="menu-container">
+    <div class="menu-header">
+      <h1 class="menu-title">
+        <i class="fas fa-utensils"></i> Danh mục món ăn
+      </h1>
+      <div class="menu-categories">
+        <button class="category-btn active">
+          <i class="fas fa-th-large"></i> Tất cả
+        </button>
+        <button class="category-btn">
+          <i class="fas fa-cheese"></i> Món khai vị
+        </button>
+        <button class="category-btn">
+          <i class="fas fa-drumstick-bite"></i> Món chính
+        </button>
+        <button class="category-btn">
+          <i class="fas fa-ice-cream"></i> Món tráng miệng
+        </button>
+        <button class="category-btn">
+          <i class="fas fa-glass-martini-alt"></i> Nước uống
+        </button>
+      </div>
+    </div>
+
+    <div class="menu-content">
+  
+      <div class="menu-item">
+        <div class="menu-item-image">
+          <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=800&auto=format&fit=crop" alt="Chân Gà Sả Ớt">
+          <div class="menu-item-tag">Bán chạy</div>
+        </div>
+        <div class="menu-item-info">
+          <h3 class="menu-item-title">Chân Gà Sả Ớt</h3>
+          <p class="menu-item-desc">Đậm đà hương vị, thơm ngon, dậy mùi lá chanh và sả cay xé</p>
+          <div class="menu-item-price">35.000 VND</div>
+          <button class="btn-order">
+            <i class="fas fa-shopping-cart"></i> Đặt món
+          </button>
+        </div>
+      </div>
+
+    
+      <div class="menu-item">
+        <div class="menu-item-image">
+          <img src="https://images.unsplash.com/photo-1551326844-4df70f78d0e9?w=800&auto=format&fit=crop" alt="Chả Giò">
+          <div class="menu-item-tag">Đặc sản</div>
+        </div>
+        <div class="menu-item-info">
+          <h3 class="menu-item-title">Chả Giò</h3>
+          <p class="menu-item-desc">Giòn tan với nhân thịt hải sản thơm ngon, dùng kèm nước mắm chua ngọt</p>
+          <div class="menu-item-price">45.000 VND</div>
+          <button class="btn-order">
+            <i class="fas fa-shopping-cart"></i> Đặt món
+          </button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-item-image">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop" alt="Bò Lúc Lắc">
+          <div class="menu-item-tag">Đặc biệt</div>
+        </div>
+        <div class="menu-item-info">
+          <h3 class="menu-item-title">Bò Lúc Lắc</h3>
+          <p class="menu-item-desc">Thịt bò Úc thượng hạng xào với ớt, hành tây, phục vụ kèm salad và cơm</p>
+          <div class="menu-item-price">120.000 VND</div>
+          <button class="btn-order">
+            <i class="fas fa-shopping-cart"></i> Đặt món
+          </button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-item-image">
+          <img src="https://images.unsplash.com/photo-1564671165093-20688ff1fffa?w=800&auto=format&fit=crop" alt="Canh Chua Cá Lóc">
+        </div>
+        <div class="menu-item-info">
+          <h3 class="menu-item-title">Canh Chua Cá Lóc</h3>
+          <p class="menu-item-desc">Vị chua thanh mát của me, dứa, đậm đà với cá lóc tươi ngon</p>
+          <div class="menu-item-price">90.000 VND</div>
+          <button class="btn-order">
+            <i class="fas fa-shopping-cart"></i> Đặt món
+          </button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-item-image">
+          <img src="https://images.unsplash.com/photo-1553163147-622ab57be1c7?w=800&auto=format&fit=crop" alt="Gỏi Cuốn Tôm Thịt">
+        </div>
+        <div class="menu-item-info">
+          <h3 class="menu-item-title">Gỏi Cuốn Tôm Thịt</h3>
+          <p class="menu-item-desc">Bánh tráng cuốn với tôm, thịt lợn, rau thơm, bún và cà rốt</p>
+          <div class="menu-item-price">65.000 VND</div>
+          <button class="btn-order">
+            <i class="fas fa-shopping-cart"></i> Đặt món
+          </button>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-image">
+          <img src="https://images.unsplash.com/photo-1539755530862-00f623c00f52?w=800&auto=format&fit=crop" alt="Lẩu Thái">
+          <div class="menu-item-tag">Nhóm</div>
+        </div>
+        <div class="menu-item-info">
+          <h3 class="menu-item-title">Lẩu Thái</h3>
+          <p class="menu-item-desc">Nước lẩu chua cay đặc trưng, phục vụ kèm hải sản, thịt và rau tươi</p>
+          <div class="menu-item-price">250.000 VND</div>
+          <button class="btn-order">
+            <i class="fas fa-shopping-cart"></i> Đặt món
+          </button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-item-image">
+          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop" alt="Chè Bà Ba">
+        </div>
+        <div class="menu-item-info">
+          <h3 class="menu-item-title">Chè Bà Ba</h3>
+          <p class="menu-item-desc">Chè ngọt béo với khoai lang, chuối, bột báng, đậu và nước cốt dừa</p>
+          <div class="menu-item-price">25.000 VND</div>
+          <button class="btn-order">
+            <i class="fas fa-shopping-cart"></i> Đặt món
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-pagination">
+      <button class="pagination-btn" disabled>
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="pagination-btn active">1</button>
+      <button class="pagination-btn">2</button>
+      <button class="pagination-btn">3</button>
+      <button class="pagination-btn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="../assets/logo.png" alt="HaDiDi Restaurant">
+        <p class="logo-text">Nơi hương vị truyền thống kết hợp với không gian sang trọng</p>
+      </div>
+      
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="section-title">Liên hệ</h3>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <span class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </span>
+              <span>(028) 3456 7890</span>
+            </li>
+            <li class="contact-item">
+              <span class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span>info@hadidirestaurant.com</span>
+            </li>
+            <li class="contact-item">
+              <span class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </span>
+              <span>123 Lê Lợi, Quận 1, TP. Hồ Chí Minh</span>
+            </li>
+          </ul>
+        </div>
+    
+        <div class="footer-section">
+          <h3 class="section-title">Giờ mở cửa</h3>
+          <ul class="hours-list">
+            <li><span><i class="far fa-clock"></i> Thứ 2 - Thứ 6:</span> <span>7:00 - 22:00</span></li>
+            <li><span><i class="far fa-clock"></i> Thứ 7 - Chủ nhật:</span> <span>7:00 - 23:00</span></li>
+            <li><span><i class="far fa-clock"></i> Ngày lễ:</span> <span>8:00 - 22:00</span></li>
+          </ul>
+        </div>
+      
+        <div class="footer-section">
+          <h3 class="section-title">Điều hướng</h3>
+          <ul class="nav-list">
+            <li><a href="../home/home.html"><i class="fas fa-home"></i> Trang chủ</a></li>
+            <li><a href="../about/about.html"><i class="fas fa-info-circle"></i> Giới thiệu</a></li>
+            <li><a href="../menu/menu.html"><i class="fas fa-utensils"></i> Thực đơn</a></li>
+            <li><a href="../reservation/reservation.html"><i class="fas fa-calendar-alt"></i> Đặt bàn</a></li>
+            <li><a href="../contact/contact.html"><i class="fas fa-envelope"></i> Liên hệ</a></li>
+            <li><a href="../review/review.html"><i class="fas fa-star"></i> Đánh giá</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="social-icons">
+        <a href="#" class="social-icon">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="social-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+      <div class="copyright">
+        © 2024 HaDiDi Restaurant. Tất cả quyền được bảo lưu.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileToggle = document.querySelector('.mobile-toggle');
+      const header = document.querySelector('.header');
+      
+      mobileToggle.addEventListener('click', function() {
+        header.classList.toggle('mobile-open');
+      });
+      
+      const categoryButtons = document.querySelectorAll('.category-btn');
+      
+      categoryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          categoryButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html> 

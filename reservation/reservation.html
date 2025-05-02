@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đặt bàn - HaDiDi Restaurant</title>
+  <link rel="stylesheet" href="reservation.css">
+  <link rel="stylesheet" href="../layout/header.css">
+  <link rel="stylesheet" href="../layout/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="../home/home.html">
+          <img src="../assets/logo.png" alt="HaDiDi Restaurant">
+        </a>
+      </div>
+      
+      <nav class="nav-desktop">
+        <ul class="nav-links">
+          <li><a href="../home/home.html" class="nav-link">Trang chủ</a></li>
+          <li><a href="../about/about.html" class="nav-link">Giới thiệu</a></li>
+          <li><a href="../menu/menu.html" class="nav-link">Thực đơn</a></li>
+          <li><a href="../reservation/reservation.html" class="nav-link active">Đặt bàn</a></li>
+          <li><a href="../contact/contact.html" class="nav-link">Liên hệ</a></li>
+          <li><a href="../review/review.html" class="nav-link">Đánh giá</a></li>
+        </ul>
+      </nav>
+      
+      <div class="user-actions">
+        <div class="user-menu">
+          <button class="user-btn">
+            <span class="user-icon">
+              <i class="fas fa-user-circle"></i>
+            </span>
+            <span class="username">Người dùng</span>
+          </button>
+          
+          <div class="dropdown-menu">
+            <a href="../booking-history/booking-history.html" class="dropdown-item">
+              <i class="fas fa-history"></i> Lịch sử đặt bàn
+            </a>
+            <a href="../review/review.html" class="dropdown-item">
+              <i class="fas fa-star"></i> Đánh giá
+            </a>
+            <a href="../auth/auth.html" class="dropdown-item logout">
+              <i class="fas fa-sign-out-alt"></i> Đăng xuất
+            </a>
+          </div>
+        </div>
+        
+        <a href="../auth/auth.html" class="auth-btn">
+          <i class="fas fa-sign-in-alt"></i> Đăng nhập
+        </a>
+      </div>
+      
+      <button class="mobile-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+    
+    <nav class="nav-mobile">
+      <ul class="mobile-links">
+        <li><a href="../home/home.html" class="mobile-link">Trang chủ</a></li>
+        <li><a href="../about/about.html" class="mobile-link">Giới thiệu</a></li>
+        <li><a href="../menu/menu.html" class="mobile-link">Thực đơn</a></li>
+        <li><a href="../reservation/reservation.html" class="mobile-link active">Đặt bàn</a></li>
+        <li><a href="../contact/contact.html" class="mobile-link">Liên hệ</a></li>
+        <li><a href="../review/review.html" class="mobile-link">Đánh giá</a></li>
+        <li><a href="../booking-history/booking-history.html" class="mobile-link">Lịch sử đặt bàn</a></li>
+        <li><a href="../auth/auth.html" class="mobile-link">Đăng nhập / Đăng ký</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="reservation-container">
+    <div class="booking-tabs">
+      <div class="booking-tab active">
+        <i class="fas fa-user"></i>
+        <span>Thông tin</span>
+      </div>
+      <div class="booking-tab">
+        <i class="fas fa-utensils"></i>
+        <span>Chọn món</span>
+      </div>
+      <div class="booking-tab">
+        <i class="fas fa-check-circle"></i>
+        <span>Xác nhận</span>
+      </div>
+    </div>
+
+    <div class="booking-form">
+      <h2>Thông tin đặt bàn</h2>
+      
+      <div class="form-group">
+        <label for="full-name"><i class="fas fa-user"></i> Họ và tên <span class="required">*</span></label>
+        <input type="text" id="full-name" placeholder="Nhập họ tên đầy đủ" class="form-control">
+      </div>
+      
+      <div class="form-group">
+        <label for="phone-number"><i class="fas fa-phone-alt"></i> Số điện thoại <span class="required">*</span></label>
+        <input type="tel" id="phone-number" placeholder="Nhập số điện thoại" class="form-control">
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="reservation-date"><i class="far fa-calendar-alt"></i> Ngày đặt bàn <span class="required">*</span></label>
+          <input type="date" id="reservation-date" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <label for="reservation-time"><i class="far fa-clock"></i> Chọn thời gian <span class="required">*</span></label>
+          <select id="reservation-time" class="form-control">
+            <option value="">Chọn thời gian</option>
+            <option value="11:00">11:00</option>
+            <option value="11:30">11:30</option>
+            <option value="12:00">12:00</option>
+            <option value="12:30">12:30</option>
+            <option value="17:00">17:00</option>
+            <option value="17:30">17:30</option>
+            <option value="18:00">18:00</option>
+            <option value="18:30">18:30</option>
+            <option value="19:00">19:00</option>
+            <option value="19:30">19:30</option>
+            <option value="20:00">20:00</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="number-guests"><i class="fas fa-users"></i> Số khách <span class="required">*</span></label>
+        <input type="number" id="number-guests" placeholder="Nhập số lượng khách" min="1" max="20" class="form-control">
+      </div>
+      
+      <div class="table-type-selection">
+        <h3><i class="fas fa-clipboard-list"></i> Loại bàn <span class="required">*</span></h3>
+        
+        <div class="table-options">
+          <div class="table-option">
+            <input type="radio" name="table-type" id="table-regular" checked>
+            <label for="table-regular">
+              <i class="fas fa-chair"></i>
+              <span>Tiệc thường</span>
+            </label>
+          </div>
+          
+          <div class="table-option">
+            <input type="radio" name="table-type" id="table-vip">
+            <label for="table-vip">
+              <i class="fas fa-glass-cheers"></i>
+              <span>Tiệc cưới</span>
+            </label>
+          </div>
+          
+          <div class="table-option">
+            <input type="radio" name="table-type" id="table-business">
+            <label for="table-business">
+              <i class="fas fa-chalkboard-teacher"></i>
+              <span>Hội nghị</span>
+            </label>
+          </div>
+          
+          <div class="table-option">
+            <input type="radio" name="table-type" id="table-party">
+            <label for="table-party">
+              <i class="fas fa-birthday-cake"></i>
+              <span>Khác</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="special-requests"><i class="fas fa-comment-alt"></i> Ghi chú đặc biệt</label>
+        <textarea id="special-requests" placeholder="Nhập yêu cầu đặc biệt của bạn, ví dụ: vị trí bàn, yêu cầu đặc biệt..." class="form-control" rows="3"></textarea>
+      </div>
+      
+      <div class="form-actions">
+        <button type="button" class="btn-secondary">
+          <i class="fas fa-arrow-left"></i> Quay lại
+        </button>
+        <button type="submit" class="btn-primary">
+          Tiếp tục <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="../assets/logo.png" alt="HaDiDi Restaurant">
+        <p class="logo-text">Nơi hương vị truyền thống kết hợp với không gian sang trọng</p>
+      </div>
+      
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="section-title">Liên hệ</h3>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <span class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </span>
+              <span>(028) 3456 7890</span>
+            </li>
+            <li class="contact-item">
+              <span class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span>info@hadidirestaurant.com</span>
+            </li>
+            <li class="contact-item">
+              <span class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </span>
+              <span>123 Lê Lợi, Quận 1, TP. Hồ Chí Minh</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3 class="section-title">Giờ mở cửa</h3>
+          <ul class="hours-list">
+            <li><span><i class="far fa-clock"></i> Thứ 2 - Thứ 6:</span> <span>7:00 - 22:00</span></li>
+            <li><span><i class="far fa-clock"></i> Thứ 7 - Chủ nhật:</span> <span>7:00 - 23:00</span></li>
+            <li><span><i class="far fa-clock"></i> Ngày lễ:</span> <span>8:00 - 22:00</span></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3 class="section-title">Điều hướng</h3>
+          <ul class="nav-list">
+            <li><a href="../home/home.html"><i class="fas fa-home"></i> Trang chủ</a></li>
+            <li><a href="../about/about.html"><i class="fas fa-info-circle"></i> Giới thiệu</a></li>
+            <li><a href="../menu/menu.html"><i class="fas fa-utensils"></i> Thực đơn</a></li>
+            <li><a href="../reservation/reservation.html"><i class="fas fa-calendar-alt"></i> Đặt bàn</a></li>
+            <li><a href="../contact/contact.html"><i class="fas fa-envelope"></i> Liên hệ</a></li>
+            <li><a href="../review/review.html"><i class="fas fa-star"></i> Đánh giá</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="social-icons">
+        <a href="#" class="social-icon">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="social-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+      <div class="copyright">
+        © 2024 HaDiDi Restaurant. Tất cả quyền được bảo lưu.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const mobileToggle = document.querySelector('.mobile-toggle');
+      const header = document.querySelector('.header');
+      
+      mobileToggle.addEventListener('click', function() {
+        header.classList.toggle('mobile-open');
+      });
+    });
+  </script>
+</body>
+</html> 
